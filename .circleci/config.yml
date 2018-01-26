@@ -17,6 +17,8 @@ jobs:
       - run:
           name: Publish Helm container
           command: |
+            echo $DOCKER_PASS
+            echo $DOCKER_USER
             echo $DOCKER_PASS | base64 -d > ${HOME}/docker_pass
             docker login -u $DOCKER_USER -p "$(cat ${HOME}/docker_pass)"
             GIT_BRANCH=$CIRCLE_BRANCH make docker_push
