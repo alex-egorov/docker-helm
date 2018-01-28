@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: lachlanevenson/docker-make
+      - image: alex202/docker-make
     steps:
       - checkout
       - setup_remote_docker
