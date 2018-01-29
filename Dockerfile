@@ -2,6 +2,7 @@ FROM alpine:3.7
 MAINTAINER Alex Egorov <alex202@egorov.net>
 #FROM lachlanevenson/k8s-helm
 
+
 ARG VCS_REF
 ARG BUILD_DATE
 
